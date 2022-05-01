@@ -5,7 +5,8 @@ import hello from '@functions/hello';
 const serverlessConfiguration: AWS = {
   service: 'ganbari-graph',
   frameworkVersion: '3',
-  plugins: ['serverless-esbuild'],
+  useDotenv: true,
+  plugins: ['serverless-esbuild', 'serverless-dotenv-plugin'],
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
